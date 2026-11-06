@@ -1,0 +1,34 @@
+composer:
+  shape: claude
+defaultThinkingLevel: auto
+modelRoles:
+  code: omniroute/auto/best-coding
+  fast: omniroute/auto/best-fast
+  local: omniroute/auto/best-fast
+  local-bonsai: omniroute/auto/best-coding
+  plan: omniroute/auto/best-reasoning
+  slow: omniroute/auto/best-coding
+  smol: google-antigravity/gemini-3.5-flash-lite
+  summarize: omniroute/auto/best-fast
+  vision: omniroute/auto/best-vision
+  default: google-antigravity/gemini-3.5-flash-lite
+providers:
+  lm-studio:
+    api: openai-completions
+    auth: none
+    baseUrl: http://127.0.0.1:1234/v1
+    discovery:
+      timeoutMs: 5000
+      type: lm-studio
+  omniroute:
+    api: openai-completions
+    auth: none
+    baseUrl: http://localhost:20128/v1
+setupVersion: 3
+stt:
+  language: pt-BR
+symbolPreset: ascii
+theme:
+  dark: dark-terminal
+update:
+  auto: true

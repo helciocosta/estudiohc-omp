@@ -1,0 +1,45 @@
+providers:
+  ollama:
+    baseUrl: https://directory-mlb-independence-ground.trycloudflare.com
+    api: openai-completions
+    auth: none
+    models:
+      - id: deepseek-r1:32b
+        name: DeepSeek R1 32B (Cloudflare)
+        reasoning: true
+        input: [text]
+        cost:
+          input: 0
+          output: 0
+          cacheRead: 0
+          cacheWrite: 0
+        contextWindow: 131072
+        maxTokens: 8192
+        omitMaxOutputTokens: true
+  omniroute:
+    baseUrl: http://localhost:20128/v1
+    api: openai-completions
+    auth: none
+    models:
+      - id: auto/best-coding
+        name: OmniRoute - Best Coding (Auto Combo)
+        reasoning: true
+        input: [text]
+        contextWindow: 1048576
+        maxTokens: 512000
+      - id: auto/best-reasoning
+        name: OmniRoute - Best Reasoning (Auto Combo)
+        reasoning: true
+        input: [text]
+        contextWindow: 1048576
+        maxTokens: 512000
+      - id: auto/best-fast
+        name: OmniRoute - Best Fast (Auto Combo)
+        input: [text]
+        contextWindow: 1048576
+        maxTokens: 512000
+      - id: auto/best-vision
+        name: OmniRoute - Best Vision (Auto Combo)
+        input: [text]
+        contextWindow: 1048576
+        maxTokens: 512000
